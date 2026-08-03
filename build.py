@@ -16,20 +16,20 @@ ROOT = os.path.dirname(os.path.abspath(__file__))
 SRC  = os.path.join(ROOT, "index.html")
 BASE = "https://roovelstudio.com"
 
-# rota -> (yol, <title>, meta description)
+# rota -> (yol, <title>, meta description, og görseli)
 PAGES = {
-    "home":    ("/",        "Roovel Studio — Indie Games from Denizli",
-                "Roovel Studio is an indie game studio in Denizli, Türkiye, crafting simulation games with sharp systems and a lot of heart."),
-    "games":   ("/games",   "Games — Roovel Studio",
-                "Everything Roovel has shipped and everything loading next: Deal Flipper, Everybody Loves a Good Hole, UNTRASH and more."),
-    "studio":  ("/studio",  "Studio — Roovel Studio",
-                "Four people in Denizli, Türkiye, building systems-driven simulation games. Meet the team behind Roovel."),
-    "press":   ("/press",   "Press Kit — Roovel Studio",
-                "Facts, assets, review keys and creator policy for Roovel Studio and our games."),
+    "home": ("/",        "Roovel Studio — Indie Games from Denizli",
+                "Roovel Studio is an indie game studio in Denizli, Türkiye, crafting simulation games with sharp systems and a lot of heart.", "og.jpg"),
+    "games": ("/games",   "Games — Roovel Studio",
+                "Everything Roovel has shipped and everything loading next: Deal Flipper, Everybody Loves a Good Hole, UNTRASH and more.", "og-games.jpg"),
+    "studio": ("/studio",  "Studio — Roovel Studio",
+                "Four people in Denizli, Türkiye, building systems-driven simulation games. Meet the team behind Roovel.", "og.jpg"),
+    "press": ("/press",   "Press Kit — Roovel Studio",
+                "Facts, assets, review keys and creator policy for Roovel Studio and our games.", "og.jpg"),
     "contact": ("/contact", "Contact — Roovel Studio",
-                "Press, publishing, playtests or just a hello — get in touch with Roovel Studio."),
+                "Press, publishing, playtests or just a hello — get in touch with Roovel Studio.", "og.jpg"),
     "privacy": ("/privacy", "Privacy Policy — Roovel Studio",
-                "How Roovel Studio handles the small amount of data this website collects."),
+                "How Roovel Studio handles the small amount of data this website collects.", "og.jpg"),
 }
 
 def sub_once(html, pattern, repl, label):
@@ -39,7 +39,8 @@ def sub_once(html, pattern, repl, label):
     return out
 
 def make_page(html, route):
-    path, title, desc = PAGES[route]
+    path, title, desc, ogimg = PAGES[route]
+    ogurl = f"{BASE}/assets/{ogimg}"
     url = BASE + ("" if path == "/" else path)
 
     html = sub_once(html, r"<title>.*?</title>", f"<title>{title}</title>", "title")
@@ -57,6 +58,10 @@ def make_page(html, route):
                     f'<meta name="twitter:title" content="{title}">', "twitter:title")
     html = sub_once(html, r'<meta name="twitter:description" content="[^"]*">',
                     f'<meta name="twitter:description" content="{desc}">', "twitter:description")
+    html = sub_once(html, r'<meta property="og:image" content="[^"]*">',
+                    f'<meta property="og:image" content="{ogurl}">', "og:image")
+    html = sub_once(html, r'<meta name="twitter:image" content="[^"]*">',
+                    f'<meta name="twitter:image" content="{ogurl}">', "twitter:image")
 
     # sunucudan gelen sayfa doğru bölümle açılsın (JS yüklenmeden önce de doğru)
     if route != "home":
@@ -90,7 +95,7 @@ def main():
         f"  <url><loc>{BASE}{'' if p == '/' else p}</loc>"
         f"<lastmod>{today}</lastmod>"
         f"<priority>{'1.0' if p == '/' else ('0.5' if p == '/privacy' else '0.8')}</priority></url>"
-        for p, _, _ in PAGES.values()
+        for p, _, _, _ in PAGES.values()
     )
     open(os.path.join(ROOT, "sitemap.xml"), "w", encoding="utf-8").write(
         '<?xml version="1.0" encoding="UTF-8"?>\n'

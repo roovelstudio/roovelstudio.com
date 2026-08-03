@@ -9,8 +9,8 @@
 <meta name="author" content="Roovel Studio">
 <meta name="keywords" content="Roovel Studio, indie game studio, Deal Flipper, UNTRASH, simulation games, Denizli, Türkiye, Steam, trading game">
 <link rel="canonical" href="https://roovelstudio.com/contact">
-<link rel="icon" type="image/png" href="assets/favicon.png">
-<link rel="apple-touch-icon" href="assets/favicon.png">
+<link rel="icon" type="image/png" href="/assets/favicon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Contact — Roovel Studio">
 <meta property="og:description" content="Press, publishing, playtests or just a hello — get in touch with Roovel Studio.">
@@ -318,12 +318,23 @@ textarea{resize:vertical;min-height:140px}
 
 /* ============ FOOTER ============ */
 footer{background:var(--bg-2);border-top:1px solid var(--line);margin-top:70px;padding:70px 0 36px;position:relative;z-index:2}
-.foot-grid{display:grid;grid-template-columns:1.8fr 1fr 1fr 1fr;gap:46px;margin-bottom:50px}
+.foot-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr 1.4fr;gap:40px;margin-bottom:50px}
 .foot-brand img{height:24px;margin-bottom:18px;filter:drop-shadow(0 2px 8px rgba(124,58,237,.4))}
 .foot-brand p{color:var(--muted);font-size:.94rem;max-width:26em}
 .foot-col h5{font-family:var(--mono);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted-2);margin-bottom:16px}
 .foot-col a{display:block;color:var(--txt-2);font-size:.94rem;padding:5px 0;transition:.2s;cursor:pointer}
 .foot-col a:hover{color:var(--iris-glow)}
+.foot-sub p{color:var(--muted-2);font-size:.82rem;line-height:1.5;margin:-4px 0 14px;max-width:22em}
+.foot-sub-field{display:flex;gap:8px}
+.foot-sub-field input{flex:1;min-width:0;background:var(--bg);border:1px solid var(--line);border-radius:10px;
+  padding:10px 12px;color:var(--txt);font-family:inherit;font-size:.85rem;outline:none;transition:border-color .2s}
+.foot-sub-field input:focus{border-color:var(--iris)}
+.foot-sub-field button{flex:0 0 auto;background:var(--iris);border:none;border-radius:10px;color:#fff;
+  padding:0 16px;font-size:1rem;cursor:pointer;transition:background .2s}
+.foot-sub-field button:hover{background:var(--iris-glow)}
+.foot-sub-toast{font-family:var(--mono);font-size:.7rem;color:var(--iris-glow);margin-top:10px;min-height:1em;
+  opacity:0;transition:opacity .3s}
+.foot-sub-toast.show{opacity:1}
 .foot-bottom{display:flex;justify-content:space-between;align-items:center;gap:20px;padding-top:28px;
   border-top:1px solid var(--line);font-family:var(--mono);font-size:.76rem;color:var(--muted-2);flex-wrap:wrap}
 .socials{display:flex;gap:9px}
@@ -379,7 +390,7 @@ a,button,input,select,textarea{outline:none}
 <!-- ============ NAV ============ -->
 <header class="nav" id="nav">
   <div class="nav-inner">
-    <a class="brand" href="/" data-route="home" aria-label="Roovel Studio"><img src="assets/logo.png" alt="Roovel Studio"></a>
+    <a class="brand" href="/" data-route="home" aria-label="Roovel Studio"><img src="/assets/logo.png" alt="Roovel Studio"></a>
     <nav class="nav-links" id="navlinks">
       <a href="/" data-route="home" class="active">Home</a>
       <a href="/games" data-route="games">Games</a>
@@ -422,7 +433,7 @@ a,button,input,select,textarea{outline:none}
         <div class="showcase">
           <div class="showcase-media">
             <span class="showcase-badge" style="color:var(--iris-glow)"><span class="dot" style="background:var(--iris-glow)"></span>Wishlists open</span>
-            <img src="assets/deal-flipper.jpg" alt="Deal Flipper" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover">
+            <img src="/assets/deal-flipper.jpg" alt="Deal Flipper" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover">
           </div>
           <div class="showcase-bar">
             <div class="info">
@@ -474,7 +485,7 @@ a,button,input,select,textarea{outline:none}
   <section class="pad-sm wrap">
     <div class="feature rev">
       <div class="fmedia reveal">
-        <img src="assets/untrash.jpg" alt="UNTRASH" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover">
+        <img src="/assets/untrash.jpg" alt="UNTRASH" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover">
         <span class="showcase-badge" style="top:16px;left:16px;color:var(--soon)"><span class="dot" style="background:var(--soon);animation:none"></span>Coming soon</span>
       </div>
       <div class="ftext reveal" style="transition-delay:.1s">
@@ -496,7 +507,7 @@ a,button,input,select,textarea{outline:none}
     <div class="feature rev">
       <div class="fmedia reveal">
         <div class="ph" style="background:linear-gradient(135deg,#2a1850,#140a24)">
-          <img src="assets/logo.png" alt="Roovel Studio" style="width:58%;opacity:.92;filter:drop-shadow(0 8px 30px rgba(124,58,237,.5))">
+          <img src="/assets/logo.png" alt="Roovel Studio" style="width:58%;opacity:.92;filter:drop-shadow(0 8px 30px rgba(124,58,237,.5))">
         </div>
       </div>
       <div class="ftext reveal" style="transition-delay:.1s">
@@ -594,47 +605,101 @@ a,button,input,select,textarea{outline:none}
 <!-- ==================== PRESS ==================== -->
 <div class="page" id="page-press">
   <section class="subhero wrap">
-    <span class="eyebrow" style="justify-content:center">Press &amp; partners</span>
+    <span class="eyebrow" style="justify-content:center">Press &amp; creators</span>
     <h1>Press kit</h1>
-    <p>Writing about us, streaming our games, or thinking about working together? Everything you need is here — and if it isn't, just ask.</p>
+    <p>Writing about us, streaming our games, or thinking about working together? Everything you need is one download away — and if what you need isn't in there, we'll make it for you.</p>
   </section>
 
+  <!-- DOWNLOAD -->
+  <section class="pad-sm wrap">
+    <div class="cta-banner reveal">
+      <h2>Everybody Loves a Good Hole</h2>
+      <p>The full kit: 4K screenshots with and without HUD, square and vertical crops, GIFs, raw uncut gameplay, key art, logos, and the documents behind the game.</p>
+      <div style="position:relative;display:flex;gap:14px;justify-content:center;flex-wrap:wrap">
+        <a class="btn btn-white" href="__PRESSKIT_DRIVE_URL__" target="_blank" rel="noopener" data-umami-event="presskit-drive-egh">Browse the full kit <span class="arr">↗</span></a>
+        <a class="btn btn-ghost" href="/press-kit/ROOVEL_Press_Kit_EGH_lite.zip" data-umami-event="presskit-zip-egh" style="border-color:rgba(255,255,255,.35);color:#fff">Quick ZIP · 40 MB</a>
+      </div>
+      <p style="position:relative;margin:18px auto 0;font-family:var(--mono);font-size:.68rem;color:rgba(243,238,251,.55);max-width:34em">The ZIP holds the documents, logos and a selected set of images. The full kit lives in folders you can pick from.</p>
+    </div>
+  </section>
+
+  <!-- WHAT'S INSIDE -->
+  <section class="pad-sm wrap">
+    <div class="sec-head center reveal">
+      <div class="l"><span class="eyebrow">What's inside</span><h2>Organised so you can grab and go.</h2></div>
+    </div>
+    <div class="vals">
+      <div class="val reveal"><div class="ic">◆</div><h4>Screenshots</h4><p>3840&#215;2160 PNG, plus a clean HUD-free version of every shot for when you need room for your own text.</p></div>
+      <div class="val reveal" style="transition-delay:.06s"><div class="ic">▣</div><h4>Square &amp; vertical</h4><p>1:1 and 9:16 captured in-engine at those ratios — not cropped down from widescreen, so nothing important sits outside the frame.</p></div>
+      <div class="val reveal" style="transition-delay:.12s"><div class="ic">▶</div><h4>Raw gameplay</h4><p>Uncut b-roll with no music and no edits, so you can cut your own. The finished trailer is in there too.</p></div>
+      <div class="val reveal" style="transition-delay:.18s"><div class="ic">✦</div><h4>GIFs &amp; loops</h4><p>Short seamless loops of the moments that read best in a post, as both GIF and lightweight MP4.</p></div>
+      <div class="val reveal" style="transition-delay:.24s"><div class="ic">⬡</div><h4>Logos &amp; key art</h4><p>Studio and game logos as transparent PNG and SVG, capsules at every Steam size, and key art with the logo removed.</p></div>
+      <div class="val reveal" style="transition-delay:.3s"><div class="ic">◇</div><h4>The documents</h4><p>A factsheet, a full walkthrough of the mechanics, and developer notes on where the game actually came from.</p></div>
+    </div>
+  </section>
+
+  <!-- KEYS + FACTS -->
   <section class="pad-sm wrap">
     <div class="two-col">
       <div class="panel reveal">
-        <span class="eyebrow" style="margin-bottom:16px;display:inline-flex">The facts</span>
-        <p style="color:var(--txt-2);margin:8px 0 22px">Roovel Studio — indie game studio, Denizli, Türkiye. Founded January 2026. Four people. Currently shipping <b style="color:#fff">Deal Flipper</b>, building <b style="color:#fff">UNTRASH</b>, with more on the way.</p>
-        <div class="gcard-tags"><span>Founded 2026</span><span>Denizli, TR</span><span>4-person team</span><span>Simulation</span><span>PC / Steam</span></div>
+        <span class="eyebrow" style="margin-bottom:16px;display:inline-flex">Play it first</span>
+        <h3 style="margin-bottom:14px">Want a key?</h3>
+        <p style="color:var(--txt-2);margin-bottom:26px">Just ask. Tell us your outlet or channel and we'll send one over — no form, no vetting process, no waiting on a committee. There are four of us and one of us will read it.</p>
+        <a class="btn btn-primary" href="mailto:info@roovelstudio.com?subject=Review%20key%20request" data-umami-event="presskit-key-request">Request a key <span class="arr">→</span></a>
+        <p class="form-note" style="margin-top:18px">Or write to <span style="color:var(--iris-glow)">info@roovelstudio.com</span></p>
       </div>
       <div class="panel reveal" style="transition-delay:.08s">
-        <span class="eyebrow" style="margin-bottom:6px;display:inline-flex">Quick links</span>
-        <div class="press-links">
-          <a class="press-link" href="https://store.steampowered.com/app/4819030/Deal_Flipper/" target="_blank" rel="noopener" data-umami-event="steam-deal-flipper-press">Deal Flipper — Steam page <span class="arr">↗</span></a>
-          <a href="/contact" class="press-link" data-route="contact">Request review keys <span class="arr">→</span></a>
-          <a href="/contact" class="press-link" data-route="contact">Logos &amp; screenshots <span class="arr">→</span></a>
-          <a href="/contact" class="press-link" data-route="contact">Publishing &amp; business <span class="arr">→</span></a>
+        <span class="eyebrow" style="margin-bottom:16px;display:inline-flex">The facts</span>
+        <p style="color:var(--txt-2);margin:8px 0 22px">Roovel Studio — an indie game studio in Denizli, Türkiye, founded January 2026 by four people who had been working apart in Denizli, İzmir and Dubai. Currently building <b style="color:#fff">Everybody Loves a Good Hole</b> and <b style="color:#fff">UNTRASH</b>, alongside <b style="color:#fff">Deal Flipper</b>.</p>
+        <div class="gcard-tags"><span>Founded 2026</span><span>Denizli, TR</span><span>4-person team</span><span>PC / Steam</span><span>15 languages</span></div>
+        <div class="press-links" style="margin-top:26px">
+          <a class="press-link" href="https://store.steampowered.com/app/4978010/Everybody_Loves_a_Good_Hole/" target="_blank" rel="noopener" data-umami-event="steam-egh-press">Everybody Loves a Good Hole — Steam <span class="arr">↗</span></a>
+          <a class="press-link" href="https://store.steampowered.com/app/4819030/Deal_Flipper/" target="_blank" rel="noopener" data-umami-event="steam-deal-flipper-press">Deal Flipper — Steam <span class="arr">↗</span></a>
+          <a class="press-link" href="https://store.steampowered.com/curator/46150590" target="_blank" rel="noopener" data-umami-event="steam-studio-press">All our games on Steam <span class="arr">↗</span></a>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- CUSTOM CAPTURES -->
   <section class="pad-sm wrap">
-    <div class="sec-head center reveal"><div class="l"><span class="eyebrow">For creators</span><h2>Streaming or covering our games?</h2><p>You don't need permission to record, stream, or monetize videos of any Roovel game. All we ask is a link back so players can find it.</p></div></div>
-    <div class="vals">
-      <div class="val reveal"><div class="ic">▶</div><h4>Monetize freely</h4><p>YouTube, Twitch, TikTok, Kick — earn from your videos of our games, no strings attached.</p></div>
-      <div class="val reveal" style="transition-delay:.08s"><div class="ic">⬡</div><h4>Use our assets</h4><p>Capsules, screenshots, and trailers are yours for coverage. Ask for hi-res and we'll send them over.</p></div>
-      <div class="val reveal" style="transition-delay:.16s"><div class="ic">✦</div><h4>Need a key?</h4><p>Reach out with your channel from the contact page and we'll sort you out, capacity allowing.</p></div>
+    <div class="panel reveal" style="text-align:center;padding:52px 44px">
+      <span class="eyebrow" style="justify-content:center;margin-bottom:18px">Can't find the shot you need?</span>
+      <h3 style="font-size:clamp(1.5rem,3vw,2.1rem);margin-bottom:16px;max-width:20em;margin-left:auto;margin-right:auto">Tell us what you're missing and we'll capture it.</h3>
+      <p style="color:var(--txt-2);max-width:38em;margin:0 auto 26px">A different resolution, a wider angle, a specific moment, a clean frame of one particular upgrade — we can go back into the build and grab it. Usually same day. This costs us almost nothing and saves you an afternoon of cropping.</p>
+      <a class="btn btn-ghost" href="mailto:info@roovelstudio.com?subject=Asset%20request" data-umami-event="presskit-custom-request">Ask for a capture <span class="arr">→</span></a>
     </div>
   </section>
 
+  <!-- STUDIO STORY -->
+  <section class="pad-sm wrap">
+    <div class="two-col">
+      <div class="reveal">
+        <span class="eyebrow" style="margin-bottom:18px;display:inline-flex">Who you're writing about</span>
+        <h2 style="font-size:clamp(1.9rem,3.6vw,2.6rem);margin-bottom:22px">The name is two words pushed together.</h2>
+        <p style="color:var(--txt-2);margin-bottom:18px;font-size:1.06rem">Roovel comes from <i>root</i> and <i>level</i>. The root is the part we never planned — four people circling each other for years across different cities, different studios and different job titles, never quite drifting apart. The level is what those years added: QA, design, production, art, all of it accumulating separately until we looked up and realised we had a whole team.</p>
+        <p style="color:var(--txt-2);font-size:1.06rem">So in January 2026 we came back to Denizli, the one place all four of us started from, and got to work. The full version of this story is in the kit.</p>
+      </div>
+      <div class="reveal" style="transition-delay:.1s">
+        <span class="eyebrow" style="margin-bottom:24px;display:inline-flex">Coverage policy</span>
+        <div class="vals" style="grid-template-columns:1fr;gap:16px">
+          <div class="val"><div class="ic">▶</div><h4>Monetize freely</h4><p>YouTube, Twitch, TikTok, Kick — earn from your videos of our games. No strings, no revenue share, no permission needed.</p></div>
+          <div class="val"><div class="ic">⬡</div><h4>Use the assets</h4><p>Everything in this kit is yours for coverage, including in thumbnails and channel art.</p></div>
+          <div class="val"><div class="ic">✦</div><h4>Just link back</h4><p>That's the only thing we ask, so players can find the game after they find you.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
   <section class="pad-sm wrap">
     <div class="sec-head center reveal"><div class="l"><span class="eyebrow">FAQ</span><h2>Quick answers.</h2></div></div>
     <div class="faq" id="faq">
-      <div class="qa"><div class="q">Where is Roovel based?<span class="plus">+</span></div><div class="a"><div>Denizli, Türkiye. We're a fully indie four-person studio founded in January 2026.</div></div></div>
-      <div class="qa"><div class="q">Which platforms do you release on?<span class="plus">+</span></div><div class="a"><div>PC via Steam to start, with our games localized into 15 languages from day one. Other platforms may follow per title.</div></div></div>
-      <div class="qa"><div class="q">What is Everybody Loves a Good Hole?<span class="plus">+</span></div><div class="a"><div>A mouse-driven arcade incremental: you steer a black hole through timed runs, swallow everything you can, and spend what you earn on a deep upgrade tree and rule-bending magic books. Wishlists are open on Steam.</div></div></div>
-      <div class="qa"><div class="q">When does UNTRASH come out?<span class="plus">+</span></div><div class="a"><div>The Steam page is coming soon. Join the mailing list on the home page and you'll be the first to know when it goes live.</div></div></div>
-      <div class="qa"><div class="q">Can I get a review or creator key?<span class="plus">+</span></div><div class="a"><div>Yes — head to the contact page, pick "Press / review key," and tell us about your outlet or channel.</div></div></div>
+      <div class="qa"><div class="q">Where is Roovel based?<span class="plus">+</span></div><div class="a"><div>Denizli, Türkiye. Four people, founded January 2026, fully independent.</div></div></div>
+      <div class="qa"><div class="q">What is Everybody Loves a Good Hole?<span class="plus">+</span></div><div class="a"><div>A mouse-driven arcade incremental: you steer a black hole through timed runs, swallow everything you can reach, and spend what you earn on a deep upgrade tree and rule-bending magic books. Wishlists are open on Steam now.</div></div></div>
+      <div class="qa"><div class="q">Can I get a review or creator key?<span class="plus">+</span></div><div class="a"><div>Yes. Email info@roovelstudio.com with your outlet or channel and we'll send one. We'd much rather you played it before you wrote about it.</div></div></div>
+      <div class="qa"><div class="q">Which platforms and languages?<span class="plus">+</span></div><div class="a"><div>PC via Steam, with the interface localized into 15 languages from day one. Other platforms may follow per title.</div></div></div>
+      <div class="qa"><div class="q">Is there a Turkish version of the kit?<span class="plus">+</span></div><div class="a"><div>Ask and we'll send the documents in Turkish. We're a Turkish studio — it's no trouble at all.</div></div></div>
     </div>
   </section>
 </div>
@@ -731,12 +796,22 @@ a,button,input,select,textarea{outline:none}
   <div class="wrap">
     <div class="foot-grid">
       <div class="foot-brand">
-        <img src="assets/logo.png" alt="Roovel Studio">
+        <img src="/assets/logo.png" alt="Roovel Studio">
         <p>An indie game studio in Denizli, Türkiye, building simulation games with sharp systems and a lot of heart.</p>
       </div>
       <div class="foot-col"><h5>Games</h5><a href="https://store.steampowered.com/app/4819030/Deal_Flipper/" target="_blank" rel="noopener">Deal Flipper ↗</a><a href="https://store.steampowered.com/app/4978010/Everybody_Loves_a_Good_Hole/" target="_blank" rel="noopener" data-umami-event="steam-egh-footer">Everybody Loves a Good Hole ↗</a><a href="/games" data-route="games">UNTRASH</a><a href="/games" data-route="games">All games</a></div>
       <div class="foot-col"><h5>Studio</h5><a href="/studio" data-route="studio">About</a><a href="/studio" data-route="studio">Team</a><a href="/press" data-route="press">Press kit</a></div>
       <div class="foot-col"><h5>Connect</h5><a href="/contact" data-route="contact">Contact</a><a href="https://x.com/roovelstudio/" target="_blank" rel="noopener">X / Twitter</a><a href="https://discord.gg/AfCYRBqE6D" target="_blank" rel="noopener">Discord</a></div>
+      <div class="foot-col foot-sub">
+        <h5>Launch alerts</h5>
+        <p>One email when a game ships or a playtest opens. Nothing else, ever.</p>
+        <div class="foot-sub-field">
+          <input id="nlEmailFoot" type="email" placeholder="you@example.com" autocomplete="email" aria-label="Email address">
+          <button onclick="subscribe('nlEmailFoot')" data-umami-event="newsletter-footer">→</button>
+        </div>
+        <input type="text" id="nlHpFoot" name="botcheck" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;opacity:0;height:0;width:0">
+        <div class="foot-sub-toast" id="nlToastFoot"></div>
+      </div>
     </div>
     <div class="foot-bottom">
       <span>© 2026 Roovel Studio · Denizli, Türkiye · <a href="/privacy" data-route="privacy" style="color:var(--muted-2)">Privacy</a></span>
@@ -757,16 +832,16 @@ const GAMES=[
   desc:"A first-person flipping sim where the whole market lives online. Hunt underpriced listings, haggle in real-time chat, and resell for profit. Every trader bargains differently — read them and outdeal them all.",
   tags:["Trading","Dialogue heavy","Economy","First-person"],
   url:"https://store.steampowered.com/app/4819030/Deal_Flipper/",
-  img:"assets/deal-flipper.jpg"},
+  img:"/assets/deal-flipper.jpg"},
  {title:"Everybody Loves a Good Hole",status:"wish",genre:"Arcade · Incremental",
   desc:"Steer a black hole across the board and swallow everything in reach. Runs are timed, the hole grows with every bite, magic books bend the rules mid-run, and the upgrade tree runs deep enough that you'll always want one more go.",
   tags:["Incremental","Arcade","Upgrade tree","Satisfying"],
   url:"https://store.steampowered.com/app/4978010/Everybody_Loves_a_Good_Hole/",
-  img:"assets/egh.jpg"},
+  img:"/assets/egh.jpg"},
  {title:"UNTRASH",status:"soon",genre:"Simulation · Scavenging",
   desc:"From the dumpster to an empire. Scavenge a dense, lived-in city for forgotten things, restore what others threw away, and grow a salvage operation from a single cart to the top of the trade.",
   tags:["Scavenging","Crafting","Open world","Cozy"],url:"",
-  img:"assets/untrash.jpg"},
+  img:"/assets/untrash.jpg"},
  {title:"Untitled · Project 04",status:"dev",genre:"Simulation · Systems",
   desc:"The next idea is already in prototype. A fresh systems-driven concept we're not ready to talk about yet — but it's pure Roovel. Join the list to hear it first.",
   tags:["Prototype","TBA","2026+"],url:"",
@@ -800,6 +875,8 @@ document.getElementById("filters").addEventListener("click",e=>{const b=e.target
 
 const pages=['home','games','studio','press','contact','privacy'];
 const PATH={home:'/',games:'/games',studio:'/studio',press:'/press',contact:'/contact',privacy:'/privacy'};
+const OG_DEFAULT="https://roovelstudio.com/assets/og.jpg";
+const OG={games:"https://roovelstudio.com/assets/og-games.jpg"};
 const META={
  home:["Roovel Studio — Indie Games from Denizli","Roovel Studio is an indie game studio in Denizli, Türkiye, crafting simulation games with sharp systems and a lot of heart."],
  games:["Games — Roovel Studio","Everything Roovel has shipped and everything loading next: Deal Flipper, Everybody Loves a Good Hole, UNTRASH and more."],
@@ -818,7 +895,10 @@ function applyMeta(r){
  const c=document.querySelector('link[rel="canonical"]'); if(c)c.setAttribute('href','https://roovelstudio.com'+(PATH[r]==='/'?'':PATH[r]));
  const ou=document.querySelector('meta[property="og:url"]'); if(ou)ou.setAttribute('content','https://roovelstudio.com'+(PATH[r]==='/'?'':PATH[r]));
  const ot=document.querySelector('meta[property="og:title"]'); if(ot)ot.setAttribute('content',m[0]);
- const od=document.querySelector('meta[property="og:description"]'); if(od)od.setAttribute('content',m[1]);}
+ const od=document.querySelector('meta[property="og:description"]'); if(od)od.setAttribute('content',m[1]);
+ const img=OG[r]||OG_DEFAULT;
+ const oi=document.querySelector('meta[property="og:image"]'); if(oi)oi.setAttribute('content',img);
+ const ti=document.querySelector('meta[name="twitter:image"]'); if(ti)ti.setAttribute('content',img);}
 function go(r,push){if(!pages.includes(r))r='home';
  pages.forEach(p=>document.getElementById('page-'+p).classList.toggle('active',p===r));
  document.querySelectorAll('.nav-links a').forEach(a=>a.classList.toggle('active',a.dataset.route===r));
@@ -846,16 +926,24 @@ document.getElementById('faq').addEventListener('click',e=>{const q=e.target.clo
  const open=q.classList.contains('open');document.querySelectorAll('.qa').forEach(x=>{x.classList.remove('open');x.querySelector('.a').style.maxHeight=null;});
  if(!open){q.classList.add('open');q.querySelector('.a').style.maxHeight=q.querySelector('.a').scrollHeight+'px';}});
 const WEB3KEY="84968b86-2b6d-4af1-a5ab-70b99d7c95d7";
-async function subscribe(){
- const inp=document.getElementById('nlEmail'),e=inp.value.trim(),t=document.getElementById('nlToast');
- if(document.getElementById('nlHp').value){t.textContent="You're on the list. See you at launch. ✦";t.classList.add('show');return;}
+document.addEventListener('keydown',e=>{
+ if(e.key!=='Enter')return;
+ if(e.target.id==='nlEmail'||e.target.id==='nlEmailFoot'){e.preventDefault();subscribe(e.target.id);}
+});
+async function subscribe(id){
+ id=id||'nlEmail';
+ const foot=(id==='nlEmailFoot');
+ const inp=document.getElementById(id),e=inp.value.trim(),
+   t=document.getElementById(foot?'nlToastFoot':'nlToast'),
+   hp=document.getElementById(foot?'nlHpFoot':'nlHp');
+ if(hp&&hp.value){t.textContent="You're on the list. ✦";t.classList.add('show');return;}
  if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(e)){t.textContent="That email looks off — mind checking it?";t.classList.add('show');return;}
  t.textContent="Adding you to the list…";t.classList.add('show');
  try{
    const r=await fetch("https://api.web3forms.com/submit",{method:"POST",headers:{"Content-Type":"application/json",Accept:"application/json"},
      body:JSON.stringify({access_key:WEB3KEY,subject:"New mailing list signup — Roovel",from_name:"Roovel Website",email:e,message:"New mailing list subscriber: "+e})});
    const d=await r.json();
-   if(d.success){t.textContent="You're on the list. See you at launch. ✦";inp.value='';}
+   if(d.success){t.textContent=foot?"You're on the list. ✦":"You're on the list. See you at launch. ✦";inp.value='';}
    else{t.textContent="Hmm, something went wrong. Try again in a moment.";}
  }catch(_){t.textContent="Network hiccup — please try again.";}
 }
