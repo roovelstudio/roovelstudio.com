@@ -16,14 +16,17 @@ ROOT = os.path.dirname(os.path.abspath(__file__))
 SRC  = os.path.join(ROOT, "index.html")
 BASE = "https://roovelstudio.com"
 
+# SPA rotasi olmayan, elle yonetilen bagimsiz sayfalar
+EXTRA_URLS = ["/join"]
+
 # rota -> (yol, <title>, meta description, og görseli)
 PAGES = {
     "home": ("/",        "Roovel Studio — Indie Games from Denizli",
-                "Roovel Studio is an indie game studio in Denizli, Türkiye, crafting simulation games with sharp systems and a lot of heart.", "og.jpg"),
+                "Roovel Studio is an indie game studio in Denizli, Türkiye, crafting systems-driven games with sharp mechanics and a lot of heart.", "og.jpg"),
     "games": ("/games",   "Games — Roovel Studio",
                 "Everything Roovel has shipped and everything loading next: Deal Flipper, Everybody Loves a Good Hole, UNTRASH and more.", "og-games.jpg"),
     "studio": ("/studio",  "Studio — Roovel Studio",
-                "Four people in Denizli, Türkiye, building systems-driven simulation games. Meet the team behind Roovel.", "og.jpg"),
+                "Four people in Denizli, Türkiye, building systems-driven games. Meet the team behind Roovel.", "og.jpg"),
     "press": ("/press",   "Press Kit — Roovel Studio",
                 "Facts, assets, review keys and creator policy for Roovel Studio and our games.", "og.jpg"),
     "contact": ("/contact", "Contact — Roovel Studio",
@@ -91,11 +94,15 @@ def main():
     built.append("404.html")
 
     today = datetime.date.today().isoformat()
+    entries = [(p, '1.0' if p == '/' else ('0.5' if p == '/privacy' else '0.8'))
+               for p, _, _, _ in PAGES.values()]
+    # SPA disinda duran bagimsiz sayfalar
+    entries += [(u, '0.7') for u in EXTRA_URLS]
     urls = "\n".join(
         f"  <url><loc>{BASE}{'' if p == '/' else p}</loc>"
         f"<lastmod>{today}</lastmod>"
-        f"<priority>{'1.0' if p == '/' else ('0.5' if p == '/privacy' else '0.8')}</priority></url>"
-        for p, _, _, _ in PAGES.values()
+        f"<priority>{pr}</priority></url>"
+        for p, pr in entries
     )
     open(os.path.join(ROOT, "sitemap.xml"), "w", encoding="utf-8").write(
         '<?xml version="1.0" encoding="UTF-8"?>\n'
